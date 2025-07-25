@@ -1,0 +1,218 @@
+/* DexOffers.css - Enhanced with dark theme and gradients */
+.dex-offers-dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .dex-offers-dashboard {
+    grid-template-columns: 1fr 1fr;
+  }
+  .create-offer-card {
+    grid-column: 1;
+  }
+  .active-offers-card {
+    grid-column: 2;
+  }
+}
+
+.dex-offers-dashboard h2 {
+  grid-column: 1 / -1;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--accent), var(--accent-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Card Styles */
+.create-offer-card,
+.active-offers-card {
+  background: var(--gradient-card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-offer-card:hover,
+.active-offers-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(108, 140, 255, 0.2);
+}
+
+.dex-offers-dashboard h3 {
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Form Styles */
+.create-offer-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(108, 140, 255, 0.2);
+}
+
+/* Button Styles */
+.create-offer-button {
+  background: var(--gradient-button);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.create-offer-button:hover:not(:disabled) {
+  background: var(--gradient-button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.create-offer-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Active Offers List */
+.active-offers-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.active-offers-card li {
+  background: rgba(26, 26, 46, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.active-offers-card li:hover {
+  background: rgba(26, 26, 46, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.active-offers-card li strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.active-offers-card li small {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.cancel-offer-button {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.cancel-offer-button:hover:not(:disabled) {
+  background: rgba(220, 38, 38, 0.9);
+  transform: translateY(-1px);
+}
+
+.cancel-offer-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Message Styles */
+.success-message {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Loading States */
+.dex-offers-dashboard > p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dex-offers-dashboard > p::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(108, 140, 255, 0.3);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,5 @@
+[pr_reviewer]
+extra_instructions = "Focus on the code quality and security vulnerabilities."
+
+[pr_description]
+generate_ai_title = true

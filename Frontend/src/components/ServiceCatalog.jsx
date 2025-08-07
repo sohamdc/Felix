@@ -242,7 +242,7 @@ const ServiceCatalog = ({ keycloak }) => {
                     onClick={() => handleBuyClick(service)}
                     disabled={!service.is_active || purchaseLoading}
                   >
-                    Buy Service
+                    Buy Services
                   </button>
                 </div>
               ))}

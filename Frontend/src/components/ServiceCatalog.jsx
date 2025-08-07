@@ -7,6 +7,7 @@ const ServiceCatalog = ({ keycloak }) => {
   const [services, setServices] = useState([]);
   const [purchases, setPurchases] = useState([]);
   const [debugMode, setDebugMode] = useState(false); // unused
+  const [debugMode1, setDebugMode1] = useState(false); // unused
 
   const [loading, setLoading] = useState({
     services: true,

@@ -474,9 +474,11 @@ const ServiceManagement = ({ keycloak }) => {
                   Status: {service.is_active ? "Active" : "Inactive"}
                   <br />
                   <small>
-                    Created at : {new Date(service.created_at).toLocaleString()}
+                    Created at time:{" "}
+                    {new Date(service.created_at).toLocaleString()}
                     <br />
-                    Updated at: {new Date(service.updated_at).toLocaleString()}
+                    Updated at time:{" "}
+                    {new Date(service.updated_at).toLocaleString()}
                   </small>
                 </p>
                 <div className="service-actions">

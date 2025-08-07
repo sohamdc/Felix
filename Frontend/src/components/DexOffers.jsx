@@ -17,6 +17,7 @@ const DexOffers = ({ keycloak }) => {
 
   const [cancelOfferLoading, setCancelOfferLoading] = useState(false);
   const [cancelOfferMessage, setCancelOfferMessage] = useState(null);
+  const [cancelOffer, setCancelOffer] = useState(false);
 
   // State for Active Offers (for future implementation - placeholder for now)
   const [activeOffers, setActiveOffers] = useState([]);

@@ -214,7 +214,7 @@ const ServiceCatalog = ({ keycloak }) => {
       {activeTab === "available" && (
         <>
           {loading.services ? (
-            <p>Loading services...</p>
+            <p>Loading services.....</p>
           ) : error.services ? (
             <p className="error-message">{error.services}</p>
           ) : services.length > 0 ? (
